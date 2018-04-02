@@ -20,6 +20,8 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -38,6 +40,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -74,10 +77,12 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private CameraSource mCameraSource;
     private CameraSourcePreview mPreview;
     private GraphicOverlay<OcrGraphic> mGraphicOverlay;
+    public OcrGraphic graphic;
 
     // Helper objects for detecting taps and pinches.
     private ScaleGestureDetector scaleGestureDetector;
     private GestureDetector gestureDetector;
+    private Button translate;
 
     // A TextToSpeech engine for speaking a String value.
     private TextToSpeech tts;
@@ -92,6 +97,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 
         mPreview = (CameraSourcePreview) findViewById(R.id.preview);
         mGraphicOverlay = (GraphicOverlay<OcrGraphic>) findViewById(R.id.graphicOverlay);
+        translate = (Button)findViewById(R.id.tbutton);
 
         // Set good defaults for capturing text.
         boolean autoFocus = true;
@@ -125,8 +131,18 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                     }
                 };
         tts = new TextToSpeech(this.getApplicationContext(), listener);
+        translate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextBlock t = graphic.getTextBlock();
+                String s = t.getValue();
+                Intent i = new Intent(OcrCaptureActivity.this, TransActivity.class);
+                i.putExtra("sent", s);
+                startActivity(i);
+            }
+        });
 
-        // TODO: Set up the Text To Speech engine.
+
     }
 
     /**
@@ -197,12 +213,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 Log.w(TAG, getString(R.string.low_storage_error));
             }
         }
-        // TODO: Create the TextRecognizer
-        // TODO: Set the TextRecognizer's Processor.
 
-        // TODO: Check if the TextRecognizer is operational.
-
-        //
         mCameraSource =
                 new CameraSource.Builder(getApplicationContext(), textRecognizer)
                         .setFacing(CameraSource.CAMERA_FACING_BACK)
@@ -333,7 +344,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
      * @return true if the tap was on a TextBlock
      */
     private boolean onTap(float rawX, float rawY) {
-        OcrGraphic graphic = mGraphicOverlay.getGraphicAtLocation(rawX, rawY);
+         graphic = mGraphicOverlay.getGraphicAtLocation(rawX, rawY);
         TextBlock text = null;
         if (graphic != null) {
             text = graphic.getTextBlock();
@@ -341,6 +352,9 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 Log.d(TAG, "text data is being spoken! " + text.getValue());
                 //
                 tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+                ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clipData = ClipData.newPlainText("Hello",text.getValue());
+                clipboardManager.setPrimaryClip(clipData);
             }
             else {
                 Log.d(TAG, "text data is null");

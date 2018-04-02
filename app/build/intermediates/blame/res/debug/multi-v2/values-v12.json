@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/rushali/Desktop/android-vision-master/visionSamples/ocr-codelab/ocr-reader-start/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v12/values-v12.xml",
+            "outputFile": "/home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v12/values-v12.xml",
             "map": [
                 {
                     "source": "/home/rushali/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/b09a251999aa478d6b25ef4d7614709e/res/values-v12/values-v12.xml",
