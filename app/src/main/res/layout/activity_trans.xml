@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/layouts"
     tools:context="com.google.android.gms.samples.vision.ocrreader.TransActivity">
 <TextView
     android:layout_width="wrap_content"
@@ -12,6 +13,11 @@
     android:padding="40dp"
     android:textSize="30sp"
     />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/words"
+        android:padding="30dp"></Spinner>
 
     <Spinner
         android:id="@+id/spinner"
@@ -34,6 +40,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Press"
+        android:text="thesaurus"
         android:id="@+id/Thesaurus"/>
 </LinearLayout>

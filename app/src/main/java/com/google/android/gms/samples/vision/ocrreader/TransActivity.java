@@ -1,5 +1,18 @@
 package com.google.android.gms.samples.vision.ocrreader;
 
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -29,9 +42,13 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
 
     private static final String API_KEY = "AIzaSyCVPpB29yueOXrutpOipksvB_Gly7T17rQ";
     Spinner spinner;
+    Spinner words;
     String type;
     Button b;
     Button b1;
+    String easy;
+    TextView textView;
+    LinearLayout l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +56,28 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
         //View view = this.getWindow().getDecorView();
        // view.setBackgroundColor(Color.WHITE);
         setContentView(R.layout.activity_trans);
+        l=(LinearLayout)findViewById(R.id.layouts);
+
         Intent i = getIntent();
-        final String easy = i.getExtras().getString("sent");
-        final TextView textView = (TextView) findViewById(R.id.text);
+        easy = i.getExtras().getString("sent");
+        textView = (TextView) findViewById(R.id.text);
         spinner = (Spinner)findViewById(R.id.spinner);
+        words = (Spinner)findViewById(R.id.words);
         b = (Button)findViewById(R.id.btrans);
         b1 = (Button)findViewById(R.id.Thesaurus);
 
+        List<String> categories1 = new ArrayList<String>();
+
+        String[] arr = easy.split(" ");
+
+        for ( String ss : arr) {
+
+            categories1.add(ss);
+        }
+        ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories1);
+        dataAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        words.setAdapter(dataAdapter1);
+        words.setOnItemSelectedListener(this);
 
         // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
@@ -109,6 +141,7 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
        String s = adapterView.getItemAtPosition(i).toString();
        if(s=="Arabic")
           type="ar";
@@ -120,6 +153,12 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
            type="te";
        else if(s=="Hindi")
            type="hi";
+       else{
+
+           easy = s;
+           textView.setText(easy);
+
+       }
 
     }
 
@@ -128,3 +167,4 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
 
     }
 }
+
