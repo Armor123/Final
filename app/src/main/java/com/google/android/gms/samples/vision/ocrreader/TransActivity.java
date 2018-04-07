@@ -27,10 +27,11 @@ import java.util.Locale;
 
 public class TransActivity extends AppCompatActivity implements OnItemSelectedListener {
 
-    private static final String API_KEY = "AIzaSyD3H7pA_-Ey8-UhZlRO575g-9GqzC-63zE";
+    private static final String API_KEY = "AIzaSyCVPpB29yueOXrutpOipksvB_Gly7T17rQ";
     Spinner spinner;
     String type;
     Button b;
+    Button b1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,7 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
         final TextView textView = (TextView) findViewById(R.id.text);
         spinner = (Spinner)findViewById(R.id.spinner);
         b = (Button)findViewById(R.id.btrans);
+        b1 = (Button)findViewById(R.id.Thesaurus);
 
 
         // Spinner Drop down elements
@@ -90,6 +92,15 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
                 }.execute();
 
 
+            }
+        });
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(TransActivity.this,ThesaurusActivity.class);
+                i.putExtra("easy",easy);
+                startActivity(i);
             }
         });
 

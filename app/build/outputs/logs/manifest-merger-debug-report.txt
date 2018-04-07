@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-39:12
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-41:12
 MERGED from [com.android.support:design:24.2.0] /home/rushali/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/b0d6bcb2e883af4b4ccba4ee947c519b/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-vision:11.0.4] /home/rushali/.gradle/caches/transforms-1/files-1.1/play-services-vision-11.0.4.aar/cd5384b2f6dcd29c122fb87a71546315/AndroidManifest.xml:2:1-5:12
 MERGED from [com.google.android.gms:play-services-vision-common:11.0.4] /home/rushali/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-11.0.4.aar/282e0817d5dd3a06ed02dffd4f2ecc0a/AndroidManifest.xml:2:1-5:12
@@ -21,20 +21,20 @@ MERGED from [com.android.support:support-media-compat:25.2.0] /home/rushali/.gra
 MERGED from [com.android.support:support-core-utils:25.2.0] /home/rushali/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/855ac251e010239904e379efd9a6cf37/AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:support-core-ui:25.2.0] /home/rushali/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/d268086ee441c8078fc2c0a29887a828/AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:support-compat:25.2.0] /home/rushali/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/1667b812e0d09b063ef0d05e93bd9405/AndroidManifest.xml:17:1-27:12
-INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-41:12
 	package
 		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:3:5-62
 		INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml
 		INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-39:12
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-41:12
 		INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-39:12
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:1-41:12
 		INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:2:11-69
@@ -52,8 +52,12 @@ uses-permission#android.permission.INTERNET
 ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:9:5-67
 	android:name
 		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:10:5-78
+	android:name
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:10:22-76
 application
-ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:11:5-37:19
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:12:5-39:19
 MERGED from [com.android.support:design:24.2.0] /home/rushali/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/b0d6bcb2e883af4b4ccba4ee947c519b/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:24.2.0] /home/rushali/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/b0d6bcb2e883af4b4ccba4ee947c519b/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-vision:11.0.4] /home/rushali/.gradle/caches/transforms-1/files-1.1/play-services-vision-11.0.4.aar/cd5384b2f6dcd29c122fb87a71546315/AndroidManifest.xml:4:5-19
@@ -87,57 +91,61 @@ MERGED from [com.android.support:support-core-ui:25.2.0] /home/rushali/.gradle/c
 MERGED from [com.android.support:support-compat:25.2.0] /home/rushali/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/1667b812e0d09b063ef0d05e93bd9405/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.2.0] /home/rushali/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/1667b812e0d09b063ef0d05e93bd9405/AndroidManifest.xml:25:5-20
 	android:supportsRtl
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:17:9-35
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:16:9-37
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:17:9-37
 	android:hardwareAccelerated
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:14:9-43
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:15:9-43
 	android:fullBackupContent
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:13:9-42
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:14:9-42
 	android:icon
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:15:9-38
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:16:9-38
 	android:allowBackup
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:18:9-47
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:19:9-47
 meta-data#com.google.android.gms.version
-ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:19:9-21:69
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:20:9-22:69
 MERGED from [com.google.android.gms:play-services-basement:11.0.4] /home/rushali/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/793e28dc61ad923cf3589c62ee5ff918/AndroidManifest.xml:20:9-121
 MERGED from [com.google.android.gms:play-services-basement:11.0.4] /home/rushali/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.0.4.aar/793e28dc61ad923cf3589c62ee5ff918/AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:21:13-66
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:22:13-66
 	android:name
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:20:13-58
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:21:13-58
 meta-data#com.google.android.gms.vision.DEPENDENCIES
-ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:22:9-24:35
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:23:9-25:35
 	android:value
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:24:13-32
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:25:13-32
 	android:name
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:23:13-70
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:24:13-70
 activity#com.google.android.gms.samples.vision.ocrreader.OcrCaptureActivity
-ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:26:9-34:20
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:27:9-35:20
 	android:label
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:28:13-38
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:29:13-38
 	android:name
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:27:13-47
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:28:13-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:29:13-33:29
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:30:17-69
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:30:25-66
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:32:17-77
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:32:27-74
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:33:27-74
 activity#com.google.android.gms.samples.vision.barcodereader.TransActivity
-ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:35:9-102
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:36:9-102
 	android:name
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:35:19-99
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:36:19-99
 activity#com.google.android.gms.samples.vision.ocrreader.TransActivity
-ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:36:9-60
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:37:9-51
 	android:name
-		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:36:19-48
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:37:19-48
+activity#com.google.android.gms.samples.vision.ocrreader.ThesaurusActivity
+ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:38:9-64
+	android:name
+		ADDED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml:38:19-52
 uses-sdk
 INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/rushali/Desktop/AndroidStudioProjects/Text-Detect-Speech/app/src/main/AndroidManifest.xml
