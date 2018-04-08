@@ -7,6 +7,7 @@ import java.util.TimerTask;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
@@ -47,8 +48,7 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
     Button b;
     Button b1;
     String easy;
-    TextView textView;
-    LinearLayout l;
+    TextView textView,entext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,28 +56,21 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
         //View view = this.getWindow().getDecorView();
        // view.setBackgroundColor(Color.WHITE);
         setContentView(R.layout.activity_trans);
-        l=(LinearLayout)findViewById(R.id.layouts);
 
         Intent i = getIntent();
         easy = i.getExtras().getString("sent");
         textView = (TextView) findViewById(R.id.text);
+       // textView.setMovementMethod(new ScrollingMovementMethod());
         spinner = (Spinner)findViewById(R.id.spinner);
         words = (Spinner)findViewById(R.id.words);
         b = (Button)findViewById(R.id.btrans);
         b1 = (Button)findViewById(R.id.Thesaurus);
+        entext = (TextView)findViewById(R.id.entext);
+        easy = easy.replace("\n", " ");
+        //textView.setText("Choose a language to translate");
+        Log.i("whhhhhhhhhhhhhhhy",easy);
 
-        List<String> categories1 = new ArrayList<String>();
 
-        String[] arr = easy.split(" ");
-
-        for ( String ss : arr) {
-
-            categories1.add(ss);
-        }
-        ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories1);
-        dataAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        words.setAdapter(dataAdapter1);
-        words.setOnItemSelectedListener(this);
 
         // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
@@ -96,8 +89,47 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
         spinner.setOnItemSelectedListener(this);
-        textView.setText(easy);
+
         final Handler textViewHandler = new Handler();
+
+
+       // entext.setText(easy);
+ new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                TranslateOptions options = TranslateOptions.newBuilder()
+                        .setApiKey(API_KEY)
+                        .build();
+                final Translate translate = options.getService();
+                final Translation translation = translate.translate(easy,
+                        Translate.TranslateOption.targetLanguage("en"));
+                textViewHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (entext != null) {
+                            entext.setText(translation.getTranslatedText());
+                            List<String> categories1 = new ArrayList<String>();
+                            String k = translation.getTranslatedText().toString();
+                            String[] arr = k.split(" ");
+
+                            for ( String ss : arr) {
+
+                                categories1.add(ss);
+
+                            }
+                            ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(TransActivity.this, android.R.layout.simple_spinner_item, categories1);
+                            dataAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            words.setAdapter(dataAdapter1);
+                            words.setOnItemSelectedListener(TransActivity.this);
+                        }
+                    }
+                });
+                return null;
+            }
+        }.execute();
+
+
+
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,7 +141,7 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
                                 .setApiKey(API_KEY)
                                 .build();
                         Translate translate = options.getService();
-                        final Translation translation = translate.translate(easy,
+                        final Translation translation = translate.translate(entext.getText().toString(),
                                         Translate.TranslateOption.targetLanguage(type));
                         textViewHandler.post(new Runnable() {
                             @Override
@@ -136,6 +168,8 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
             }
         });
 
+
+
     }
 
 
@@ -156,8 +190,6 @@ public class TransActivity extends AppCompatActivity implements OnItemSelectedLi
        else{
 
            easy = s;
-           textView.setText(easy);
-
        }
 
     }

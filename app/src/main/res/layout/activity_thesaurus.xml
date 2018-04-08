@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.google.android.gms.samples.vision.ocrreader.ThesaurusActivity">
-
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></ListView>
+        android:orientation="vertical"
+        android:background="@drawable/gradient2"
+        ></ListView>
 
 </RelativeLayout>

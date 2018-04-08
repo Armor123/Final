@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="Prim"> #3F51B5 </color>
+<color name="PrimDark">#ff512f  </color>
+<color name="ColorAccent">#dd2476 </color>
+    <color name="Prim1"> #cc2b5e</color>
+   <color name="ColorAccent1">#753a88 </color>
+
+</resources>

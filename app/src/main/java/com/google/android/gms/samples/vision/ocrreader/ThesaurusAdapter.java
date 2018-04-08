@@ -1,6 +1,10 @@
 package com.google.android.gms.samples.vision.ocrreader;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +44,7 @@ public class ThesaurusAdapter extends ArrayAdapter<Thesaurus> {
         if(currentItem.getSyn()!=null) {
             String s1 = "";
             if(position==0)
-             s1+= "ADJECTIVE"+"\n";
+             s1+= "ADJECTIVE" +"\n";
             else if(position==1)
                 s1+= "NOUN"+"\n";
             else
